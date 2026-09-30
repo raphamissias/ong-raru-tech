@@ -3,55 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./globalStyles.css" />
+    <link rel="stylesheet" href="./styles/globalStyles.css" />
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/components/buttons.css" />
+    <link rel="stylesheet" href="./styles/components/inputs.css" />
     <title>ONG - RaruTech</title>
   </head>
   <body>
-    <main>
-      <header>
-        <img class="logo" src="./img/ong_logo.png" alt="" />
-      </header>
+    <header>
+      <nav>
+        <div class="logo-wrapper">
+          <img class="logo" src="./assets/img/ong_logo.png" alt="" />
+          <span class="logo-text">ONG RaruTech</span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/" data-route>Início</a>
+          </li>
 
-      <section>
-        <img src="./img/apresentacao.jpg" alt="Faixada da Instituição" />
-        <h2>Ações que transformam</h2>
-        <p>Transformar vidas com afeto, dignidade e esperança.</p>
-      </section>
+          <li class="nav-item">
+            <a href="donates" data-route>Como Ajudar</a>
 
-      <section>
-        <h2>Notícias</h2>
-        <article>
-          <img src="./img/instrumento.jpg" alt="Homem tocando piano" />
-          <h3>Turma musical</h3>
-          <p>Aberta as inscrições para aulas de música...</p>
-        </article>
+            <ul class="dropdown-menu">
+              <li><a href="#" data-route>Projeto 1</a></li>
+              <li><a href="#" data-route>Projeto 2</a></li>
+            </ul>
+          </li>
 
-        <article>
-          <img src="./img/brinquedo.jpg" alt="Caixa de brinquedos" />
-          <h3>Doações de brinquedos são realizadas na regional</h3>
-          <p>O dia das crianças começou mais cedo...</p>
-        </article>
-      </section>
+          <li class="nav-item">
+            <a href="about" data-route>Sobre nós</a>
+          </li>
+        </ul>
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+      </nav>
+    </header>
 
-      <section>
-        <h2>Como Contribuir</h2>
-        <p>Envie-nos um email</p>
-        <form action=""></form>
-      </section>
+    <div id="app"></div>
+    <div id="toast-notification" class="toast-notification"></div>
 
-      <section>
-        <h2>Locais</h2>
-        <p>Envie-nos um email</p>
-      </section>
-    </main>
     <footer>
       <section>
         <h3>Contatos</h3>
-        <p>Telefone: (99) 99999-9999</p>
-        <p>Whatsapp: (99) 99999-9999</p>
-        <p>Email: abc@abc.com</p>
+        <div class="contacts-wrapper">
+          <p>Telefone: (99) 99999-9999</p>
+          <p>Whatsapp: (99) 99999-9999</p>
+          <p>Email: abc@abc.com</p>
+        </div>
       </section>
     </footer>
   </body>
+  <script type="module" src="./js/router.js"></script>
+  <script type="module" src="../js/pages/home.js" defer></script>
+  <script src="https://soufianodev.github.io/Toast-JS/libs/js/v2.1.0-beta/Toast.js"></script>
 </html>
