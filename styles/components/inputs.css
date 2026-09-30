@@ -1,0 +1,7 @@
+input:user-invalid {
+  border: 1px solid red;
+}
+
+input:user-valid {
+  border: 1px solid green;
+}

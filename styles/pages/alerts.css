@@ -1,0 +1,278 @@
+.components {
+  width: min(100% - 2rem, 1100px);
+  margin: 0 auto;
+  padding: var(--spacing-8) 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.components section {
+  padding: var(--spacing-6);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.components h2 {
+  margin-bottom: var(--spacing-4);
+
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.25rem 0.75rem;
+
+  border-radius: var(--radius-full);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  margin-right: var(--spacing-2);
+}
+
+.badge-success {
+  background: var(--color-success);
+  color: var(--color-primary);
+}
+
+.badge-warning {
+  background: var(--color-warning);
+  color: var(--color-secondary-dark);
+}
+
+.badge-error {
+  background: var(--color-danger);
+  color: var(--color-danger);
+}
+
+/* =========================
+   ALERTAS
+========================= */
+
+.alert {
+  width: 100%;
+
+  padding: 1rem;
+
+  margin-bottom: var(--spacing-3);
+
+  border-radius: var(--radius-md);
+
+  border-left: 4px solid;
+
+  font-size: 0.95rem;
+}
+
+.alert:last-child {
+  margin-bottom: 0;
+}
+
+.alert strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Sucesso */
+
+.alert-success {
+  background: #eee1ff;
+  border-color: var(--color-success);
+  color: var(--color-primary-dark);
+}
+
+/* Atenção */
+
+.alert-warning {
+  background: #f8e4fc;
+  border-color: var(--color-warning);
+  color: var(--color-secondary-dark);
+}
+
+/* Erro */
+
+.alert-error {
+  background: #fde7e7;
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+/* =========================
+   TOAST
+========================= */
+
+.toast {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+
+  width: fit-content;
+  max-width: 100%;
+
+  padding: 1rem 1.5rem;
+
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-md);
+
+  animation: toast-in 0.3s ease;
+}
+
+.toast strong {
+  font-weight: 700;
+}
+
+/* Animação de entrada */
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   MODAL
+========================= */
+
+/* Checkbox usado para controlar o modal */
+
+#open-modal {
+  display: none;
+}
+
+/* Botão para abrir */
+
+.modal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.75rem 1.25rem;
+
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.modal-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Fundo do modal */
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  background: rgba(33, 28, 32, 0.55);
+
+  z-index: 1000;
+}
+
+/* Mostrar modal quando checkbox estiver marcado */
+
+#open-modal:checked ~ .modal {
+  display: flex;
+}
+
+/* Conteúdo */
+
+.modal-content {
+  width: min(100%, 500px);
+
+  padding: 2rem;
+
+  background: var(--color-white);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-md);
+
+  animation: modal-in 0.25s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+
+  color: var(--color-primary);
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
+
+  color: var(--color-gray-700);
+}
+
+/* Botão fechar */
+
+.close-modal {
+  display: inline-flex;
+
+  padding: 0.65rem 1.2rem;
+
+  background: var(--color-gray-100);
+  color: var(--color-gray-700);
+
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.close-modal:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Animação */
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
