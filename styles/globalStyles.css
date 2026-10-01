@@ -17,6 +17,7 @@
   --color-gray-500: #737373;
   --color-gray-700: #404040;
   --color-black: #171717;
+  --color-text-white: #ffffffd9;
 
   --font-family-base: "Inter", sans-serif;
 
@@ -48,5 +49,95 @@
 }
 
 * {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-base);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family: var(--font-family-base);
+
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-700);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  color: var(--color-primary);
+}
+
+h3 {
+  color: var(--color-primary-light);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+}
+
+input:focus {
+  border-color: var(--color-primary-light);
+}
+
+input:valid {
+  border-color: #27ae60;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #e74c3c;
+}
+
+section,
+.hero {
+  grid-column: 1 / -1;
+}
+
+section {
+  margin: 1rem 0 0;
 }

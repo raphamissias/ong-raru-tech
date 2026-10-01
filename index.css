@@ -1,18 +1,16 @@
+/* Nav */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
+  padding: var(--spacing-4);
 }
 
 .logo-wrapper {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.logo {
+  height: 76px;
 }
 
 .logo-text {
@@ -44,10 +42,6 @@ ul {
     visibility 0.3s ease;
 }
 
-a {
-  text-decoration: none;
-}
-
 .nav-item:hover .dropdown-menu {
   visibility: visible;
   opacity: 1;
@@ -73,145 +67,15 @@ a {
   transform: scale(1.2);
   transition: transform 0.3s ease;
 }
+/* Nav End */
 
-li {
-  list-style-type: none;
+footer {
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-4);
+  background-color: var(--color-primary);
 }
 
-.home-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 2rem;
-}
-
-.news {
-}
-
-.news h2 {
-  grid-area: h2;
-  text-align: center;
-}
-
-.news-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "h2 h2 h2"
-    "arcticle arcticle arcticle";
-  grid-gap: 2rem;
-}
-
-.logo {
-  height: 76px;
-}
-
-h2 {
-  color: var(--color-primary);
-}
-
-h3 {
-  color: var(--color-primary-light);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-input {
-  padding: 8px;
-  border: 1px solid var(--color-primary);
-  border-radius: 6px;
-}
-
-input:focus {
-  border-color: var(--color-primary-light);
-}
-
-input:valid {
-  border-color: #27ae60;
-}
-
-input:invalid:not(:placeholder-shown) {
-  border-color: #e74c3c;
-}
-
-.contacts-wrapper {
-  display: flex;
-  gap: 1rem;
-}
-
-/* 1 — Telas muito pequenas */
-@media (max-width: 480px) {
-  main {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .news {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "h2"
-      "arcticle";
-    gap: 1rem;
-  }
-
-  .news h2 {
-    text-align: start;
-  }
-}
-
-/* 2 — Smartphones */
-@media (min-width: 481px) and (max-width: 767px) {
-  main {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .news {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-
-/* 3 — Tablets */
-@media (min-width: 768px) and (max-width: 991px) {
-  main {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-/* 4 — Desktops */
-@media (min-width: 992px) and (max-width: 1199px) {
-  main {
-    grid-template-columns: repeat(12, 1fr);
-  }
-}
-
-/* 5 — Desktops panorâmicos */
-@media (min-width: 1200px) {
-  main {
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
-  }
-}
-
-/* Geral */
-@media (max-width: 767px) {
-  .menu-toggle {
-    visibility: visible;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .dropdown-menu {
-    position: static;
-  }
+footer h3,
+footer p {
+  color: var(--color-white);
 }
