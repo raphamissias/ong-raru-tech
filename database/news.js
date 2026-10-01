@@ -4,8 +4,8 @@ export const news = [
     description:
       "Aberta as incrições para a trilha de aprendizagem de programação voltada para jovens e adolescentes.",
     img: {
-      src: "assets/img",
-      alt: "Imagem dos alunos do Programa Jovem",
+      src: "assets/img/tech-person.jfif",
+      alt: "Jovem em frente ao notebook",
     },
   },
   {

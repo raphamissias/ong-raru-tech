@@ -12,12 +12,17 @@ export const renderNews = async () => {
     newsContainer.insertAdjacentHTML(
       "beforeend",
       `
-            <article>
-              <img src="${item.img.src}" alt="${item.img.alt}" />
-              <h3>${item.name}</h3>
-              <p>${item.description}</p>
-            </article>
-        `,
+        <article class="news-card">
+          <div class="news-card-image">
+            <img src="${item.img.src}" alt="${item.img.alt}" />
+          </div>
+          <div class="news-card-content">
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
+            <a href="#"> Leia mais → </a>
+          </div>
+        </article>
+      `,
     );
   });
 };
