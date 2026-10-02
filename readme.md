@@ -8,6 +8,7 @@ ONG destinada a integração tecnológica. Fique por dentro de novos eventos, in
 
 - Painel de avisos e notícias
 - Cadastro para contribuições
+- Locais
 
 ---
 
@@ -15,16 +16,34 @@ ONG destinada a integração tecnológica. Fique por dentro de novos eventos, in
 
 ```
 RaruTech/
-├── img
-cadastro.html
-globalStyles.css
-index.css
-index.html
-projetos.html
+├── assets
+  ├── img
+├── database
+├── js
+  ├── pages
+├── pages
+├── styles
+  ├── pages
 ```
 
 ---
 
 ## 🛠️ Tecnologias
 
+- HTML
+- CSS
 - JavaScript
+
+## 🛠️ Instalação local
+
+1. Clonar o repositório
+
+````
+git clone https://github.com/raphamissias/ong-raru-tech.git```
+````
+
+2. Entrar na pasta
+
+```
+cd ong-raru-tech
+```
